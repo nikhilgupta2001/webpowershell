@@ -1,3 +1,6 @@
+
+
+
 var a = 1;
 
   function operate() {
@@ -36,7 +39,7 @@ function slide()
   else {
     i=1;
   }
-  document.querySelector(".slider").src=images[i-1];
+  document.querySelector(".slider").src=images[i];
 
 }
 
