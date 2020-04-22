@@ -3,39 +3,7 @@ const router = require('express').Router();
 
 
 
-router.get("/",function(req,res){
-  var request = require("request");
 
-  var options = {
-    method: 'GET',
-    url: 'https://covid-193.p.rapidapi.com/statistics',
-    headers: {
-      'x-rapidapi-host': 'covid-193.p.rapidapi.com',
-      'x-rapidapi-key': 'a091c6cf50msh034d39fd55b88fep1bc326jsn924ae5b0baff'
-    }
-  };
-
-  request(options, function (error, response, body) {
-  	if (error) throw new Error(error);
-     var data=JSON.parse(body);
-     var New=data.response[42].cases.new;
-      var Active=data.response[42].cases.active;
-       var Critical=data.response[42].cases.critical;
-        var Recovered=data.response[42].cases.recovered;
-         var Total=data.response[42].cases.total;
-console.log(New);
-     res.render("index",
-     {
-       New:New,
-     Active:Active,
-   Critical:Critical,
- Recovered:Recovered,
-Total:Total
-}
-
-   );
-  });
-});
 router.get("/prevention",function(req,res){
   res.render("prevention");
 });
@@ -51,7 +19,26 @@ router.get("/login",function(req,res){
 router.get("/overview",function(req,res){
   res.render("overview");
 });
-
+router.get("/aboutus",function(req,res)
+{
+  res.render("aboutus");
+})
+router.get("/symptoms",function(req,res)
+{
+  res.render("symptoms");
+})
+router.get("/faq",function(req,res)
+{
+  res.render("faq");
+})
+router.get("/feedback",function(req,res)
+{
+  res.render("feedback");
+})
+router.get("/table",function(req,res)
+{
+  res.render("table");
+})
 router.post("/Login.html",function(req){
   const email=req.body.email;
 

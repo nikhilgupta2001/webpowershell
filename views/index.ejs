@@ -1,6 +1,5 @@
-
-
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js">
+</script>
 <%- include("header"); -%>
   <div class="header"><span id="covid19">COVID-19</span></div>
   <div id="Mainarea">
@@ -62,16 +61,16 @@
 
     <div class="indian">
       <h1> Cases In India</h1><br></br>
+        <h2 style="align:center;"><a href="/table"> State Wise Data</a></h2><br>
        <div class="indian1">
-        <li> New<br></br>  <%= JSON.stringify(New)%></li>
+        <li> New<br></br>  <%=JSON.stringify(New)%></li>
         <li> Active<br></br><%= JSON.stringify(Active)%></li>
         <li>  Critical<br></br><%= JSON.stringify(Critical)%></li>
         <li>  Recovered<br></br><%= JSON.stringify(Recovered)%></li>
         <li> Total<br></br> <%= JSON.stringify(Total)%></li>
          </div>
       </div>
-
-  <%- include("footer"); -%>
+      <%- include("footer"); -%>
   <script src="helper.js" type="text/javascript">
   </script>
   <script>
@@ -111,7 +110,6 @@
         setTimeout(showSlides, 3000);
       }
       </script>
-
 
 
 </body>

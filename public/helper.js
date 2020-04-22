@@ -27,7 +27,7 @@ var a = 1;
 
 // Prevention
 
-var images=["antibiotic.png","travel.png","pp.webp","pr.jpg","home.jpg"]
+var images=["antibiotic.png","hand.jpg","pp.webp","pr.jpg","home.jpg"]
 var i=images.length;
 setInterval(slide,3000);
 function slide()
@@ -54,7 +54,7 @@ function nextClick()
 }
 function prevClick()
 {
-  if(i>=images.length)
+  if(i>images.length)
   { i=i-1;}
   else {
     i=5;
